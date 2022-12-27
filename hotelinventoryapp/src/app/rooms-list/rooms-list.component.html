@@ -1,0 +1,81 @@
+<!-- <p>rooms-list works!</p> -->
+
+<!-- <h2>{{title}} </h2> -->
+<!-- {{roomList}} -->
+<div class="bg">
+    <div class="container">
+        <table class="table table-hover mb-0">
+            <thead>
+                <tr>
+                    <th>Index</th>
+                    <th>Even/Odd</th>
+                    <th>Room Number</th>
+                    <th>Room Type</th>
+                    <th>Room Price</th>
+                    <th>Room Amenities</th>
+                    <th>Checkin Time</th>
+                    <th>Rating</th>
+                    <th>Your Rating</th>
+                    <th>
+                        <!-- Edit    -->
+                    </th>
+                    <th>
+                        <!-- Select Room -->
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let room of rooms | filter : price ; let e=even; let o=odd ; let i= index">
+                    <td>{{i | percent}}</td>
+                    <td>{{e ? "Even" : "Odd"}} </td>
+                    <td>{{room.roomNumber }}</td>
+                    <td>{{room.roomType }}</td>
+                    <td>{{room.price | currency : 'EUR'}}</td>
+                    <td>{{room.amenities | titlecase}}</td>
+                    <td>{{room.checkinTime | date : 'short' }}</td>
+                    <td>{{room.rating | number: '1.1-1'}} <span class="fa fa-star"></span>  </td>
+                    <td>{{room.finalRating}}<span class="fa fa-star"></span></td>
+                    <!-- <td><span (click)="editRating(room)">Edit</span></td> -->
+                    
+
+                    <td><ngb-rating [max]="5" [rate]="room.finalRating || 0" (click)="GetRating(room)" [formControl]="ratingcontrol" ></ngb-rating></td>
+                    <td>
+                        <!-- <button class="btn btn-primary" 
+                (click)="selectRoom(room)">
+                    Select
+                </button> -->
+                        <!-- <button type="button" class="btn-btn" [routerLink]="['/booking',room.roomNumber]">Book
+                    Room</button> -->
+                        <div class="btn-btn"><a [routerLink]="['/booking',room.roomNumber]">Book Room</a></div>
+                    </td>
+
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+<!-- <div class="d-flex justify-content-center mt-100">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="stars">
+                <form action="">
+                    <input class="star star-5" id="star-5" type="radio" name="star" />
+                    <label class="star star-5" for="star-5"></label>
+                    <input class="star star-4" id="star-4" type="radio" name="star" />
+                    <label class="star star-4" for="star-4"></label>
+                    <input class="star star-3" id="star-3" type="radio" name="star" />
+                    <label class="star star-3" for="star-3"></label>
+                    <input class="star star-2" id="star-2" type="radio" name="star" />
+                    <label class="star star-2" for="star-2"></label>
+                    <input class="star star-1" id="star-1" type="radio" name="star" />
+                    <label class="star star-1" for="star-1"></label>
+                </form>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+
+<!-- style="background-image:url('C:\Users\MasterTech\hotelinventoryapp/src/hotel.jpg'); -->

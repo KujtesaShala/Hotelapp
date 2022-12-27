@@ -1,0 +1,135 @@
+<!-- <h1>Hello World</h1> -->
+<!-- <hinv-rooms></hinv-rooms> -->
+
+<!-- <hinv-container>
+    <hinv-rooms></hinv-rooms>
+    <hinv-employee></hinv-employee> 
+</hinv-container> -->
+
+<!-- <nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
+  <div class="container px-4 px-lg-5">
+      <a class="navbar-brand" >Hills Hotel</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          Menu
+          <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ms-auto py-4 py-lg-0">
+              <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" [routerLink]="'rooms'">Rooms</a></li>
+              <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" [routerLink]="'booking/1'">Booking</a></li>
+              <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" [routerLink]="'employee'">Employee</a></li>
+              <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" [routerLink]="'comment'">Comments</a></li>
+          </ul>
+      </div>
+  </div>
+</nav> -->
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" style="font-size:xx-large; font-family: Georgia, 'Times New Roman', Times, serif"
+        href="#">Hills Hotel</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+        aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" [routerLink]="'rooms'">Rooms<span class="sr-only">(current)</span></a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" [routerLink]="'booking/1'">Booking</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" [routerLink]="'employee'">Employee</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" [routerLink]="'comment'">Comments</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" style="font-size:xx-large; font-family: Georgia, 'Times New Roman', Times, serif" href="#!">Hills Hotel</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item"><a class="nav-link" [routerLink]="'rooms'">Rooms</a></li>
+                <li class="nav-item"><a class="nav-link" [routerLink]="'booking/1'">Booking</a></li>
+                <li class="nav-item"><a class="nav-link" [routerLink]="'employee'">Employee</a></li>
+                <li class="nav-item"><a class="nav-link" [routerLink]="'comment'">Comments</a></li>
+            </ul>
+        </div>
+    </div>
+</nav> -->
+
+
+<!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark" >
+  
+    <a class="navbar-brand px-4" href="#">Hills Hotel</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarText">
+      <ul class="navbar-nav ms-auto py-4 py-lg-0">
+        <li class="nav-item active">
+          <a class="nav-link" [routerLink]="'rooms'">Rooms</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="'booking/1'">Booking</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="'employee'">Employee</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" [routerLink]="'comment'">Comments</a>
+          </li>
+      </ul>
+      <span class="navbar-text">
+        Navbar text with an inline element
+      </span>
+    </div>
+  </nav> -->
+
+<!-- <div #name>
+
+</div>
+<hinv-employee></hinv-employee>  -->
+
+
+
+<!-- <div #name>
+
+</div> -->
+<!-- 
+<div>
+    <ng-template #user></ng-template>
+</div> -->
+<!-- <a [routerLink]="'rooms'">Rooms</a>
+<a [routerLink]="'employee'">Employee</a>
+<a [routerLink]="'booking/1'">Booking</a>
+<a [routerLink]="'comment'">Comments</a> -->
+<router-outlet></router-outlet>
+
+
+<footer class="border-top">
+    <div class="container px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-md-10 col-lg-8 col-xl-7">
+                <ul class="list-inline text-center">
+                    <li class="list-inline-item">
+                        <div class="small text-center text-muted fst-italic">A product of </div>
+                        <a href="https://pyramid-dev.com/">
+                            <span class="fa-stack fa-lg">
+                                <img src="../assets/pyramid-header.png" style="width:100%">
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+                <div class="small text-center text-muted fst-italic">Copyright &copy; Hills Hotel 2022</div>
+            </div>
+        </div>
+    </div>
+</footer>
